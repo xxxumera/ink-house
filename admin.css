@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #333333;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+header span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888888;
+}
+
+/* Основная часть */
+
+main {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+main h2 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+/* Контейнер заявок */
+
+#applications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Карточка заявки */
+
+.application-card {
+    background-color: #0d0d0d;
+    border: 1px solid #333333;
+    padding: 30px;
+    transition: border-color 0.3s ease;
+}
+
+.application-card:hover {
+    border-color: #777777;
+}
+
+.application-card h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333333;
+}
+
+.application-card p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.application-card p:last-child {
+    margin-top: 20px;
+    color: #666666;
+    font-size: 12px;
+}
+/* Статусы заявок */
+
+.application-status {
+    display: inline-block;
+    padding: 7px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #777;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+}
+
+.application-card:has(.application-status) {
+    position: relative;
+}
+
+/* Кнопки */
+
+.application-card button {
+    padding: 12px 16px;
+    margin: 15px 10px 0 0;
+    background: transparent;
+    border: 1px solid #555;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.application-card button:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+/* Кнопка удаления */
+
+.application-card button:last-child {
+    border-color: #713b3b;
+    color: #d47b7b;
+}
+
+.application-card button:last-child:hover {
+    background: #713b3b;
+    color: white;
+}
+/* Новая заявка — зелёная */
+.application-status.new {
+    color: #4ade80 !important;
+    border-color: #4ade80;
+}
+
+/* Обработанная — красная */
+.application-status.completed {
+    color: #f87171 !important;
+    border-color: #f87171;
+}

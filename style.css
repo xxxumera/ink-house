@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid #333;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    background-color: #000000;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #292929;
+    color: #ffffff;
+}
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    gap: 25px;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("hero.avif") center/cover no-repeat;
+}
+
+
+.hero h2 {
+    font-size: 64px;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    color: #aaaaaa;
+    font-size: 18px;
+}
+
+button {
+    padding: 15px 35px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.subtitle {
+    color: #999;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 35px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #999;
+}
+
+.about,
+.works,
+.price,
+.contacts {
+    padding: 100px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.about h2,
+.works h2,
+.price h2,
+.contacts h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    letter-spacing: 4px;
+}
+
+.about p,
+.works p,
+.price p,
+.contacts p {
+    color: #aaa;
+    line-height: 2;
+    font-size: 17px;
+}
+
+.hero h2 {
+    font-size: 72px;
+    letter-spacing: 7px;
+    line-height: 1.15;
+}
+
+.hero p {
+    color: #dddddd;
+    font-size: 18px;
+}
+
+.hero .subtitle {
+    color: #cccccc;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.button {
+    padding: 18px 40px;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+
+.gallery-more a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 15px 35px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery-more a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 70px auto;
+    align-items: start;
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.center-column {
+    padding-top: 100px;
+}
+
+.right-column {
+    padding-top: 35px;
+}
+
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-item:nth-child(2) img {
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-item:nth-child(3) img {
+    aspect-ratio: 3 / 4;
+}
+
+.vertical-item img {
+    aspect-ratio: 2 / 5;
+}
+/* Появление фотографий при прокрутке */
+
+.gallery-item {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.gallery-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Главная кнопка записи */
+
+.button {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* Прайс-лист */
+
+.price-list {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 25px 10px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.price-item:hover {
+    background-color: #151515;
+}
+.price-item span:first-child {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.price-item span:last-child {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.price-item:hover span:first-child {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+/* Заголовок прайс-листа */
+
+.price h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-bottom: 45px;
+}
+.price-note {
+    margin-top: 30px;
+    color: #777777;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.price-item:first-child {
+    border-top: 1px solid #333;
+}
+/* Раздел О НАС */
+
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.about-content h3 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+    color: #ffffff;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #aaaaaa;
+    margin-bottom: 25px;
+}
+
+.about-content h3:last-child {
+    margin-top: 45px;
+    margin-bottom: 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+/* Форма записи */
+
+.contacts-description {
+    color: #aaaaaa;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+    background-color: #111111;
+    border: 1px solid #333333;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffffff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777777;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form button {
+    padding: 18px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* Футер */
+
+.footer {
+    padding: 60px 10% 30px;
+    background-color: #080808;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: #888888;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-copy {
+    padding-top: 25px;
+    border-top: 1px solid #222;
+    font-size: 12px !important;
+}
