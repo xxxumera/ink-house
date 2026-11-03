@@ -104,7 +104,7 @@ def static_files(filename):
         "style.css",
         "admin.css",
         "script.js",
-        "admin.js"
+        "admin.js",
         "favicon.png"
     }
 
@@ -117,7 +117,6 @@ def static_files(filename):
         return "Файл не найден", 404
 
     return send_from_directory(BASE_DIR, filename)
-
 
 # Приём заявок — публичный
 @app.route("/api/applications", methods=["POST"])
