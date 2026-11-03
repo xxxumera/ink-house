@@ -446,3 +446,214 @@ html {
     border-top: 1px solid #222;
     font-size: 12px !important;
 }
+
+/* ==========================
+   МОБИЛЬНАЯ АДАПТАЦИЯ
+   ========================== */
+
+@media (max-width: 768px) {
+
+    /* Шапка */
+    header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 22px;
+        letter-spacing: 4px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2px;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    /* Главный экран */
+    .hero {
+        min-height: 85vh;
+        padding: 160px 20px 60px;
+        gap: 22px;
+    }
+
+    .hero h2 {
+        font-size: clamp(32px, 9vw, 46px);
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero .subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .button {
+        padding: 15px 25px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    /* Основные секции */
+    .about,
+    .works,
+    .price,
+    .contacts {
+        padding: 70px 6%;
+    }
+
+    .about h2,
+    .works h2,
+    .price h2,
+    .contacts h2 {
+        font-size: 27px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .about p,
+    .works p,
+    .price p,
+    .contacts p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* Галерея */
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 35px auto;
+    }
+
+    .gallery-column {
+        display: contents;
+    }
+
+    .center-column,
+    .right-column {
+        padding-top: 0;
+    }
+
+    .gallery-item img,
+    .gallery-item:nth-child(2) img,
+    .gallery-item:nth-child(3) img,
+    .vertical-item img {
+        aspect-ratio: 3 / 4;
+    }
+
+    /* Прайс */
+    .price-list {
+        margin: 30px auto;
+    }
+
+    .price-item {
+        padding: 18px 5px;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .price-item span:first-child {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .price-item span:last-child {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .price h2 {
+        font-size: 29px;
+        letter-spacing: 3px;
+    }
+
+    .price-note {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* О нас */
+    .about-content h3 {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* Форма */
+    .contacts-description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        padding: 17px;
+    }
+
+    /* Футер */
+    .footer {
+        padding: 45px 6% 25px;
+    }
+
+    .footer-content h2 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    .footer-links {
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}
+
+/* Очень узкие экраны */
+@media (max-width: 380px) {
+
+    nav a {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .gallery {
+        gap: 8px;
+    }
+
+    .price-item {
+        gap: 8px;
+    }
+}
