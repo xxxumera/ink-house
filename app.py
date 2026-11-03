@@ -105,6 +105,7 @@ def static_files(filename):
         "admin.css",
         "script.js",
         "admin.js"
+        "favicon.png"
     }
 
     allowed_image = re.fullmatch(
